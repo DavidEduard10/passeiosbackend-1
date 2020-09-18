@@ -1,11 +1,11 @@
 const express = require('express');
-require('dotenv/config');
+require('dotenv');
 
 const mongoose = require('mongoose');
 const rotas = require('./rotas/routes')
 const app = express();
 
-mongoose.connect(`mongodb+srv://${process.env.USUARIO_MONGO}:${process.env.SENHA_MONGO}@${process.env.URL_MONGO}?retryWrites=true&w=majority`, {
+mongoose.connect(`mongodb+srv://${process.env.USUARIO_MONGO}:pantanal@reservaspantanal.sjaod.mongodb.net/reservas?retryWrites=true&w=majority`, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
